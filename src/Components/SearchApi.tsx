@@ -6,6 +6,7 @@ function SearchApi() {
 
   return (
     <Grid centered columns={2}>
+      <h1>Rick and Morty API Consume</h1>
       <Grid.Row centered>
         <Grid.Column widescreen={10}>
           <Input
@@ -15,10 +16,10 @@ function SearchApi() {
             placeholder="Search Characters"
             action={{
               icon: 'search',
-              content: 'Buscar',
+              content: 'Search',
               labelPosition: 'right',
               style: {
-                backgroundColor: '#fadaec',
+                backgroundColor: '#fadaec'
               },
             }}
             onChange={handleSearchCharacterListRickAndMorty}

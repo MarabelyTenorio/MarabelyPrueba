@@ -1,14 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { RecoilRoot } from 'recoil';
+import { Grid } from 'semantic-ui-react';
+import CharactersList from './Components/CharactersList';
+import ContainerMain from './Components/ContainerMain';
+import SearchApi from './Components/SearchApi';
+import './Styles/main.css';
+
+const SearchContainer = Grid.Column;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <h1>holaAmigo</h1>
-      </header>
-    </div>
+    <RecoilRoot>
+      <ContainerMain>
+        <Grid
+          className="GridMainContainer"
+          centered
+        >
+          <SearchContainer
+            className="searchApiContainer"
+          >
+            <SearchApi />
+            <CharactersList />
+          </SearchContainer>
+        </Grid>
+      </ContainerMain>
+    </RecoilRoot>
   );
 }
 

@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { IAPIRickAndMorty } from 'interfaces/ApiRickAndMorty';
 import CharactersRecoil from '../Store/characters/CharactersRecoil';
+import CharactersList from '../Components/CharactersList';
 
 function useCharacters() {
   const [charactersList, setCharactersList] = useRecoilState(CharactersRecoil);
@@ -16,6 +17,7 @@ function useCharacters() {
   const handleSearchCharacterListRickAndMorty = async (
     e: React.ChangeEvent<HTMLInputElement>,
   ) => {
+    //console.log((await getPageCharactersList().then()).results.filter((item) => { return item.name.toLowerCase().includes(e.target.value.toLowerCase())} ));
     // Aqui iria la funcionalidad de la busqueda de los personajes
   };
 
